@@ -3,7 +3,7 @@
 %[text] # Lecture 17 - Newton, fzero & optimizing
 %%
 %[text] ## Example 2
-%[text] ## Use the Newton’s method to find the root of $f{\\left(x\\right)}=x^2 -22x-230${"editStyle":"visual"}, to within 0.01 using an initial guess of  $x\_r =-9${"editStyle":"visual"} . Plot from -14 to -5.
+%[text] ## Use the Newton’s method to find the root of $f\\left(x\\right)=x^2 -22x-230${"editStyle":"visual"}, to within 0.01 using an initial guess of  $x\_r =-9${"editStyle":"visual"} . Plot from -14 to -5.
 %[text] •*Extra Challenge*: Under what conditions will Newton’s method return the correct answer in exactly zero or one iteration?
 %[text] 
 %[text] **STEP** **1 Define** **variables**
@@ -67,7 +67,7 @@ xr = 30;
 itr = 0;
 maxTol = 0.01;
 %%
-%[text] ## Example 3 : Find a root of $f{\\left(x\\right)}=ln{\\left(x\\right)}\*sin{\\left(x\\right)}${"editStyle":"visual"} to within a tolerance of 0.001 using an initial guess of  $x\_r =800${"editStyle":"visual"}. Plot from 795 to 805.
+%[text] ## Example 3 : Find a root of $f\\left(x\\right)=ln\\left(x\\right)\*sin\\left(x\\right)${"editStyle":"visual"} to within a tolerance of 0.001 using an initial guess of  $x\_r =800${"editStyle":"visual"}. Plot from 795 to 805.
 %[text] 
 %[text] **STEP** **1 Define** **variables**
 %[text] You need 3 things:
@@ -181,13 +181,13 @@ disp(['Example 3 - Root of f(x) near x = 800: x = ', num2str(root)]);
 %[text] ## Example 7: Finding Minimum Values Using Optimization (Step Function)
 %[text] ## Find the minimum value of the function between x=5 and x=10, with a tolerance of 0.01.
 %[text] Find the minimum values between 5 and 10 for the function:
-%[text]{"align":"center"} $f{\\left(x\\right)}=\\cos \\left(x\\right)e^{0\\ldotp 1x} \\left(x\<c\\right)+\\left(\\cos \\left(c\\right)\*e^{0\\ldotp 1c} \\right)\\left(x\\ge c\\right)${"editStyle":"visual"}
+%[text]{"align":"center"} $f\\left(x\\right)=\\cos \\left(x\\right)e^{0\\ldotp 1x} \\left(x\<c\\right)+\\left(\\cos \\left(c\\right)\*e^{0\\ldotp 1c} \\right)\\left(x\\ge c\\right)${"editStyle":"visual"}
 %[text]{"align":"center"} $f\\left(x\\right)\\left\\lbrace \\begin{array}{ll}\n\\cos \\left(x\\right)e^{0\\ldotp 1x}  & x\<c\\\\\n\\left(\\cos \\left(c\\right)e^{0\\ldotp 1c} \\right) & x\\ge c\n\\end{array}\\right.${"editStyle":"visual"}
 %[text] With $c=4\\ldotp 05\\pi${"editStyle":"visual"} and tolerance of 0.01.
 %[text] 
 %[text] 
 %[text] **STEP 1:** **Define** **constants** **and** **parameters**
-%[text] Define the constant cc and the interval where the minimum will be searched.
+%[text] Define the constant c and the interval where the minimum will be searched.
 c = 4.05 * pi;
 xspan = [5, 10];  % Interval to search for minimum
 %[text] **STEP** **2:** **Define** **the** **objective** **function**
@@ -266,7 +266,7 @@ xlim([6 13])
 %%
 %[text] ## **Example 9: Optimization Using Newton's Method (Finding the Maximum)**
 %[text] You are the chief scientist at Bottom’s-Up Craft Brewing, and the brew master has asked you to increase the company’s profits by optimizing the fermentation process. You describe the process with the following model:
-%[text]{"align":"center"} $f{\\left(Q\\right)}=8000PMWa{\\left(1-\\frac{1}{1+\\frac{kV}{Q}}\\right)}-4000{{\\left(8000\\rho Q\\right)}}^{0.6}${"editStyle":"visual"}
+%[text]{"align":"center"} $f\\left(Q\\right)=8000PMWa\\left(1-\\frac{1}{1+\\frac{kV}{Q}}\\right)-4000{\\left(8000\\rho Q\\right)}^{0\\ldotp 6}${"editStyle":"visual"}
 %[text] where Q is the flow-rate of materials to the fermenter and f(Q) is the gross from the process. Flow-rate can vary from 10 to 100 $m^3 /h${"editStyle":"visual"}. How can we determine the best flow-rate of materials, $Q^\*${"editStyle":"visual"}, using these coefficients and a tolerance of 0.01?
 %[text]{"align":"center"} ![](text:image:3199)
 %[text] Hint: We are looking for the maximum value.
@@ -354,7 +354,7 @@ grid on;
 %[text] 
 %[text] **STEP** **1:** **Define** **the** **variables** **and** **tolerance**
 %[text] Set the convergence tolerance, initial guess, plotting range, and maximum number of iterations.
-%[text] - Initial guess: `x0` 
+%[text] - Initial guess: `x0`
 %[text] - `loops` (maximum number of iterations).
 %[text] - Tolerance: `tolx`
 %[text] - Plotting range: `tspan` \
@@ -430,7 +430,7 @@ hold off;
 %[text] FOR THIS EXAMPLE, f(X,Y)=X2+Y2
 %[text] 
 %[text] **STEP 1:** **Define** **the** **variables** **and** **learning** **rate**
-%[text] - X range: 
+%[text] - X range:
 %[text] - Y range:
 %[text] - Learning rate: `alpha`  \
 x = -10:1:10;
@@ -454,7 +454,7 @@ title('Gradient Descent Optimization');
 colorbar;
 %[text] **STEP** **5:** **Define** **the** **initial** **guess**
 %[text] Set the starting point for gradient descent.
-%[text] - Initial guess: `x0` 
+%[text] - Initial guess: `x0`
 %[text] - Maximum iterations:
 %[text] - Learning rate: `alpha`  \
 x0 = [10, 10];
@@ -486,7 +486,7 @@ hold off;
 %[text] Set the convergence tolerance, learning rate, initial guess, plotting range, and maximum number of iterations.
 %[text] - Initial guess: `x0` (starting point near the desired minimum).
 %[text] - Learning rate: `alpha`  (controls the step size).
-%[text] - Tolerance: `tolx` 
+%[text] - Tolerance: `tolx`
 %[text] - Maximum iterations: `maxloops`
 %[text] - Plotting range: `tspan`  \
 tolx = 0.01;
@@ -511,9 +511,11 @@ d2fx=matlabFunction(d2fx);
 %[text] Use `fplot` to graph the function over the specified interval.
 figure;
 fplot(f, tspan, 'LineWidth', 2);
-xlabel('x'); ylabel('f(x)'); title('Gradient Descent Optimization');
-grid on;
 hold on;
+xlabel('x'); 
+ylabel('f(x)'); 
+title('Gradient Descent Optimization');
+grid on;
 %[text] **STEP** **6:** **Run** **Gradient** **Descent**
 %[text] Use a `for` loop to repeatedly calculate the gradient and update the estimate.
 tic
@@ -582,7 +584,8 @@ d2fx = matlabFunction(d2fx);
 %[text] Use `fplot` to graph the function over the specified interval.
 figure;
 fplot(f, tspan, 'LineWidth', 2);
-xlabel('x'); ylabel('f(x)');
+xlabel('x'); 
+ylabel('f(x)');
 title('Gradient Ascent Optimization');
 grid on;
 hold on;
@@ -623,7 +626,7 @@ toc
 fprintf('Final x value (local max): %.4f\n', x1);
 hold off;
 %%
-%[text] ## Example 5: Simplex method
+%[text] ## Example 5: Simplex method ( fminsearch)
 %[text] For the function:
 %[text]{"align":"center"} $f\\left(x\\right)=\\frac{x^2 \\cos \\left(x\\right)-x}{10}${"editStyle":"visual"}
 %[text] ## Find the minimum 
@@ -682,7 +685,7 @@ fprintf('Maximum f(x) value: %.4f\n', f(xm));
 %[text] ## Example 6: Finding the Best Dose-Response Coefficients
 %[text] 
 %[text] Due to a mutation of the Macarena Valley Fever (MVF) virus that typically affects only animal populations, a human outbreak has developed outside of Atlanta. As an engineer working at the CDC, your team has developed a gold nanoparticle drug delivery system to eradicate MVF; however, the treatment is expensive and you wish to determine the minimum possible dose to eliminate the virus to ensure enough is available for all who need it. The CDC biology team supplies you with a dataset of 250 dose-response points they have tested. 
-%[text]{"align":"center"} $R{\\left(d\\right)}=\\frac{{\\left(r\_m -r\_0 \\right)}}{1+{{\\left(\\frac{r\_{50} }{d}\\right)}}^n }+r\_0${"editStyle":"visual"}
+%[text]{"align":"center"} $R\\left(d\\right)=\\frac{\\left(r\_m -r\_0 \\right)}{1+{\\left(\\frac{r\_{50} }{d}\\right)}^n }+r\_0${"editStyle":"visual"}
 %[text] Where r is the magnitude of the response, as in $r\_0${"editStyle":"visual"} is unaided recovery rate, $r\_m${"editStyle":"visual"} is max response,$r\_{50}${"editStyle":"visual"} is 50% of the max response and the Hill coefficient ( transition rate to max) is denoted by n.
 %[text] You decide to use this data to fit the classic dose-response Hill function to determine the minimum required dose.
 %[text] 
